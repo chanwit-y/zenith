@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@import '@radix-ui/themes/styles.css';
+
+/* Custom CSS variables and overrides */
+:root {
+  --my-custom-spacing: 1rem;
+}
+
+/* Custom component styles that work with Radix Themes */
+@layer components {
+  .custom-gradient {
+    @apply bg-gradient-to-r from-blue-500 to-purple-600;
+  }
+}
