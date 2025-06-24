@@ -14,7 +14,7 @@
       "require": "./dist/zenith.umd.js",
       "types": "./dist/main.d.ts"
     },
-    "./styles": "./dist/styles.css"
+    "./styles": "./dist/zenith.css"
   },
   "peerDependencies": {
     "react": ">=18.0.0",

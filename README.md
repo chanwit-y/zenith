@@ -52,3 +52,137 @@ export default tseslint.config({
   },
 })
 ```
+
+# @chanwity/zenith
+
+A modern React component library built with Radix UI and Tailwind CSS.
+
+## Installation
+
+```bash
+npm install @chanwity/zenith
+# or
+yarn add @chanwity/zenith
+# or
+pnpm add @chanwity/zenith
+```
+
+### Peer Dependencies
+
+Make sure you have the required peer dependencies installed:
+
+```bash
+npm install react react-dom @radix-ui/themes
+```
+
+## Usage
+
+### 1. Import Styles
+
+Import the CSS styles in your main application file:
+
+```tsx
+import '@chanwity/zenith/styles'
+```
+
+### 2. Wrap your app with ThemeProvider
+
+```tsx
+import { ThemeProvider } from '@chanwity/zenith'
+
+function App() {
+  return (
+    <ThemeProvider
+      theme={{
+        appearance: 'light',
+        accentColor: 'blue',
+        radius: 'medium'
+      }}
+    >
+      {/* Your app content */}
+    </ThemeProvider>
+  )
+}
+```
+
+### 3. Use Components
+
+```tsx
+import { CustomButton, CustomCard, cn } from '@chanwity/zenith'
+
+function MyComponent() {
+  return (
+    <div className="p-4">
+      <CustomCard 
+        title="Welcome" 
+        description="This is a custom card component"
+        hover
+      >
+        <CustomButton gradient>
+          Click me!
+        </CustomButton>
+      </CustomCard>
+    </div>
+  )
+}
+```
+
+## Components
+
+### CustomButton
+
+Extended Radix UI Button with additional features:
+
+- `gradient`: Applies a custom gradient style
+- `asChild`: Render as a different element
+- All standard Radix UI Button props
+
+### CustomCard
+
+A card component with title and description:
+
+- `title`: Card title
+- `description`: Card description  
+- `hover`: Enable hover effects
+- Standard div props
+
+### ThemeProvider
+
+Wrapper for Radix UI Theme provider:
+
+- `theme`: Theme configuration object
+- `children`: React children
+- `className`: Additional CSS classes
+
+## Utilities
+
+### cn
+
+A utility function for merging Tailwind CSS classes:
+
+```tsx
+import { cn } from '@chanwity/zenith'
+
+const className = cn('bg-blue-500', 'text-white', 'px-4 py-2')
+```
+
+## Themes
+
+Pre-configured theme objects:
+
+```tsx
+import { defaultTheme, darkTheme } from '@chanwity/zenith'
+
+// Use predefined themes
+<ThemeProvider theme={darkTheme}>
+  {/* Your app */}
+</ThemeProvider>
+```
+
+## TypeScript
+
+This library is written in TypeScript and includes complete type definitions.
+
+## License
+
+MIT
