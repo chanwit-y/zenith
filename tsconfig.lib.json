@@ -11,7 +11,8 @@
   "include": [
     "src/lib/**/*",
     "src/components/**/*", 
-    "src/themes/**/*"
+    "src/themes/**/*",
+    "src/globals.d.ts"
   ],
   "exclude": [
     "src/**/*.test.*",
