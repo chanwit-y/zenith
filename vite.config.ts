@@ -9,6 +9,9 @@ export default defineConfig({
     react(),
     dts({
       insertTypesEntry: true,
+      outDir: 'dist',
+      include: ['src/lib/**/*', 'src/components/**/*', 'src/themes/**/*'],
+      exclude: ['src/**/*.test.*', 'src/**/*.spec.*'],
     }),
     tailwindcss(),
   ],
@@ -22,13 +25,23 @@ export default defineConfig({
     },
     rollupOptions: {
       // Externalize deps that shouldn't be bundled
-      external: ['react', 'react-dom'],
+      external: ['react', 'react-dom', '@radix-ui/themes', '@radix-ui/react-slot', '@radix-ui/react-icons'],
       output: {
         globals: {
           react: 'React',
           'react-dom': 'ReactDOM',
+          '@radix-ui/themes': 'RadixThemes',
+          '@radix-ui/react-slot': 'RadixSlot',
+          '@radix-ui/react-icons': 'RadixIcons',
+        },
+        // Preserve CSS as a separate file
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name === 'style.css') return 'styles.css';
+          return assetInfo.name || 'asset';
         },
       },
     },
+    // Ensure CSS is extracted
+    cssCodeSplit: false,
   },
 })
