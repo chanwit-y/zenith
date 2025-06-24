@@ -16,9 +16,9 @@ export default defineConfig({
     lib: {
       // Entry point for your library
       entry: resolve(__dirname, 'src/lib/main.ts'),
-      name: 'MyComponentLibrary',
+      name: 'zenith',
       formats: ['es', 'umd'],
-      fileName: (format) => `my-component-library.${format}.js`,
+      fileName: (format) => `zenith.${format}.js`,
     },
     rollupOptions: {
       // Externalize deps that shouldn't be bundled
