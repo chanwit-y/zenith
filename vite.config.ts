@@ -10,8 +10,8 @@ export default defineConfig({
     dts({
       insertTypesEntry: true,
       outDir: 'dist',
-      include: ['src/lib/**/*', 'src/components/**/*', 'src/themes/**/*'],
-      exclude: ['src/**/*.test.*', 'src/**/*.spec.*'],
+      tsconfigPath: './tsconfig.lib.json',
+      rollupTypes: true,
     }),
     tailwindcss(),
   ],
