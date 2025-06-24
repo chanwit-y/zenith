@@ -1,13 +1,13 @@
 {
   "name": "@chanwity/zenith",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "files": [
     "dist"
   ],
   "main": "./dist/zenith.umd.js",
   "module": "./dist/zenith.es.js",
-  "types": "./dist/zenith.d.ts",
+  "types": "./dist/main.d.ts",
   "exports": {
     ".": {
       "import": "./dist/zenith.es.js",
