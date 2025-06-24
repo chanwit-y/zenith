@@ -1,11 +1,25 @@
 {
-  "name": "zenith",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@cy/zenith",
+  "version": "0.1.0",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/zenith.umd.js",
+  "module": "./dist/zenith.es.js",
+  "types": "./dist/zenith.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/zenith.es.js",
+      "require": "./dist/zenith.umd.js",
+      "types": "./dist/zenith.d.ts"
+    },
+    "./styles": "./dist/styles.css"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "build:lib": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },

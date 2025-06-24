@@ -1,5 +1,6 @@
+import type { ThemeProps } from "@radix-ui/themes";
 
-export const defaultTheme = {
+export const defaultTheme: ThemeProps = {
   appearance: 'light',
   accentColor: 'blue',
   grayColor: 'slate',
