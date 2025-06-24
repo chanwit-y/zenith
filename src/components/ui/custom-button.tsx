@@ -1,4 +1,4 @@
-import  React, { forwardRef } from "react"
+import { forwardRef } from "react"
 import type { ComponentPropsWithoutRef, ElementRef } from "react"
 import { Button as RadixButton } from '@radix-ui/themes'
 import { Slot } from "@radix-ui/react-slot"
